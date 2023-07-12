@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker123test.azurecr.io/angular -deployment
+  labels:
+    app: docker123test.azurecr.io/angular
+  namespace: mani
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: docker123test.azurecr.io/angular
+  template:
+    metadata: 
+      labels:
+        app: docker123test.azurecr.io/angular
+    spec:
+      containers:
+      - name: docker123test.azurecr.io/angular
+        image: ravi0626/ravi
+        ports:
+        - containerPort: 5000
