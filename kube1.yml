@@ -11,7 +11,7 @@ spec:
     matchLabels:
       app: docker123test.azurecr.io/angular
   template:
-    metadata: 
+    metadata:
       labels:
         app: docker123test.azurecr.io/angular
     spec:
