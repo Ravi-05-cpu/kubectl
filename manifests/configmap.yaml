@@ -1,7 +1,8 @@
-kind: ConfigMap
 apiVersion: v1
+kind: ConfigMap
 metadata:
-  name: CM
-  namespace: default
+  name: dotnet-app-deployment
+  namespace: ravi
 data:
-  key: DB_HOST
+  DB_HOST: key
+  # Add other configuration key-value pairs as needed

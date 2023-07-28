@@ -1,18 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: walmartpaymentservice
-  namespace: walmartdev
+  name: dotnet-app
+  namespace: ravi
 spec:
   selector:
-    app: walmartpayment-dev
-  type: LoadBalancer
-  sessionAffinity: None
-  sessionAffinityConfig:
-    clientIP:
-      timeoutSeconds: 10800
+    app: dotnet-app
+  type : LoadBalancer
   ports:
-  - name: http-port
-    protocol: TCP
-    port: 80
-    targetPort: 5000
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
