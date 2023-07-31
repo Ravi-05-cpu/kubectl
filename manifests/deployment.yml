@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ravi0626ravi 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ravi0626ravi
+  template:
+    metadata:
+      labels:
+        app: ravi0626ravi 
+    spec:
+      containers:
+        - name: ravi0626ravi 
+          image: acr0626.azurecr.io/ravi0626ravi
+          ports:
+          - containerPort: 5000
